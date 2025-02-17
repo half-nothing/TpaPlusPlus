@@ -75,6 +75,7 @@ tasks {
         val minecraftVersion: String by project
         val loaderVersion: String by project
         val kotlinLoaderVersion: String by project
+        val architecturyApiVersion: String by project
 
         inputs.property("version", project.version)
         inputs.property("minecraft_version", minecraftVersion)
@@ -86,7 +87,8 @@ tasks {
                 "version" to project.version,
                 "minecraft_version" to minecraftVersion,
                 "loader_version" to loaderVersion,
-                "kotlin_loader_version" to kotlinLoaderVersion
+                "kotlin_loader_version" to kotlinLoaderVersion,
+                "architectury_api_version" to architecturyApiVersion
             )
         }
     }

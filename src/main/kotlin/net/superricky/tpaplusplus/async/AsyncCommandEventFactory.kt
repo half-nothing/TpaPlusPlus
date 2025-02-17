@@ -11,7 +11,7 @@ class AsyncCommandEventFactory {
         return this
     }
 
-    fun invoke(event: AsyncCommandEvent, asyncCommandData: AsyncCommandData): AsyncCommandEventFactory {
+    operator fun invoke(event: AsyncCommandEvent, asyncCommandData: AsyncCommandData): AsyncCommandEventFactory {
         if (!listeners.containsKey(event)) {
             listeners[event] = HashSet()
             return this
